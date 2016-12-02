@@ -24,7 +24,7 @@ def play(station):
         stations[station]
     ])
     # wait for stream to cache
-    for _ in range(8*2):
+    for _ in range(5*2):
         c.led_on("orange")
         sleep(0.25)
         c.led_off("orange")
