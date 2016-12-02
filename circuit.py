@@ -28,7 +28,7 @@ def __led(led, state):
     elif led == "all":
         __led("green", state)
         __led("yellow", state)
-        __led("red", state)
+        __led("orange", state)
         return True
     else:
         return False
