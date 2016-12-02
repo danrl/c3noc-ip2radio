@@ -18,13 +18,6 @@ def __led_init():
         led_init = True
 
 def __led(led, state):
-    # state
-    if state == "off":
-        state = GPIO.LOW
-    elif state == "on":
-        state = GPIO.HIGH
-    else:
-        return False
     # led
     if led == "green":
         led = "XIO-P0"
@@ -37,6 +30,13 @@ def __led(led, state):
         __led("yellow", state)
         __led("red", state)
         return True
+    else:
+        return False
+    # state
+    if state == "off":
+        state = GPIO.LOW
+    elif state == "on":
+        state = GPIO.HIGH
     else:
         return False
     # execute
