@@ -31,7 +31,7 @@ def play(station):
         sleep(0.25)
     c.led_on("orange")
 
-c.led_on("orange")
+play(0)
 while True:
     if c.button("one"):
       c.led_off("yellow")
