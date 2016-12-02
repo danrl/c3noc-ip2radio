@@ -13,7 +13,7 @@ proc = False
 def play(station):
     global stations
     global proc
-    c.led_off("orange")
+    c.led_off("all")
     if proc:
         proc.terminate()
         sleep(3)
@@ -32,15 +32,15 @@ def play(station):
     c.led_on("orange")
 
 play(0)
+c.led_on("green")
+
 while True:
     if c.button("one"):
-      c.led_off("yellow")
-      c.led_on("green")
       play(0)
+      c.led_on("green")
     elif c.button("two"):
-      c.led_off("green")
-      c.led_on("yellow")
       play(1)
+      c.led_on("yellow")
     sleep(0.5)
 
 c.cleanup()
