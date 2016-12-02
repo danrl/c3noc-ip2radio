@@ -33,9 +33,10 @@ def __led(led, state):
     elif led == "orange":
         led = "XIO-P4"
     elif led == "all":
-        return __led("green", state) &&
-               __led("yellow", state) &&
-               __led("red", state)
+        __led("green", state)
+        __led("yellow", state)
+        __led("red", state)
+        return True
     else:
         return False
     # execute
