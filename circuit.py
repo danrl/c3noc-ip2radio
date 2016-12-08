@@ -67,7 +67,7 @@ def button(button):
     if button == "one":
         button = "XIO-P6"
     elif button == "two":
-     button = "XIO-P7"
+       button = "XIO-P7"
     else:
         return False
     return GPIO.input(button)
