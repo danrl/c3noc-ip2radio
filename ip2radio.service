@@ -1,0 +1,10 @@
+[Unit]
+Description=ip2radio
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python /root/c3noc-ip2radio/ip2radio.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
